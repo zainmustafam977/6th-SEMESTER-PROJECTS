@@ -1,0 +1,213 @@
+/* ===== PROGRAMS PAGE STYLES ===== */
+
+/* Page Hero (reusable across pages) */
+.page-hero {
+  position: relative;
+  padding: 10rem 0 5rem;
+  overflow: hidden;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 50%,
+    var(--primary-light) 100%
+  );
+  z-index: 0;
+}
+
+.page-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.page-hero__content .badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.page-hero__content h1 {
+  font-size: 3.25rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.page-hero__content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Programs Section */
+.programs-section {
+  padding: var(--section-padding);
+}
+
+.programs-section--grad {
+  background: var(--white);
+}
+
+.programs-section__header {
+  margin-bottom: 2.5rem;
+}
+
+.programs-section__header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.programs-section__header p {
+  color: var(--gray-500);
+  font-size: 1rem;
+}
+
+/* Program Cards Grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.programs-grid--grad {
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  max-width: 740px;
+}
+
+/* Program Card */
+.program-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.programs-section--grad .program-card {
+  background: var(--gray-50);
+}
+
+.program-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+}
+
+.program-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.program-card__icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-card__icon {
+  font-size: 1.5rem;
+}
+
+.program-card__name {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.program-card__details {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.program-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.program-card__detail-icon {
+  font-size: 0.9rem;
+}
+
+.program-card__desc {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+/* Subject Tags */
+.program-card__subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.program-card__tag {
+  padding: 0.3rem 0.7rem;
+  background: var(--gray-100);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.program-card__tag--more {
+  background: rgba(200, 169, 81, 0.12);
+  color: var(--accent-dark);
+}
+
+.program-card__footer {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 1rem;
+}
+
+.program-card__link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.program-card:hover .program-card__link {
+  color: var(--accent-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-hero__content h1 {
+    font-size: 2.25rem;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,262 @@
+/* ===== ADMISSION PAGE STYLES ===== */
+
+/* Criteria */
+.adm-criteria {
+  padding: var(--section-padding);
+}
+
+.adm-criteria__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.criteria-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.criteria-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.criteria-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.criteria-card h3 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.criteria-card p {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Admission Process Timeline */
+.adm-process {
+  padding: var(--section-padding);
+  background: var(--white);
+}
+
+.adm-process__timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.adm-process__timeline::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    var(--primary-light),
+    var(--accent)
+  );
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.timeline-item__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  width: 65px;
+}
+
+.timeline-item__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--white);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-item__step {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-item__content {
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-200);
+  flex: 1;
+  transition: var(--transition);
+}
+
+.timeline-item__content:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-item__content h3 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.35rem;
+}
+
+.timeline-item__content p {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Important Dates */
+.adm-dates {
+  padding: var(--section-padding);
+}
+
+.adm-dates__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.date-card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.date-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.date-card--active {
+  border-color: var(--success);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.04), rgba(16, 185, 129, 0.01));
+}
+
+.date-card__status {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.date-card__event {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.35rem;
+}
+
+.date-card__date {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+/* Admission CTA */
+.adm-cta {
+  padding: 0 0 4rem;
+}
+
+.adm-cta__card {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  text-align: center;
+}
+
+.adm-cta__card h2 {
+  font-size: 2.25rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.adm-cta__card p {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+.adm-cta__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.adm-cta__actions .btn-outline {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--white);
+}
+
+.adm-cta__actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .adm-criteria__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adm-dates__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adm-cta__card {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .adm-process__timeline::before {
+    display: none;
+  }
+
+  .timeline-item__marker {
+    flex-direction: row;
+    width: auto;
+  }
+}
