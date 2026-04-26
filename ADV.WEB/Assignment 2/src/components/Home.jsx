@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import programsData from "../data/programsData";
-import heroBanner from "../assets/images/hero-banner.png";
+import heroBanner from "../assets/images/banners/hero-banner.png";
 import "./Home.css";
 
 // Reusable StatCard component — demonstrates props usage

@@ -1,12 +1,12 @@
 // Faculty data array — stored in a component-accessible module
 // Faculty is rendered dynamically using .map()
 
-import faculty1 from "../assets/images/faculty1.png";
-import faculty2 from "../assets/images/faculty2.png";
-import faculty3 from "../assets/images/faculty3.png";
-import faculty4 from "../assets/images/faculty4.png";
-import faculty5 from "../assets/images/faculty5.png";
-import faculty6 from "../assets/images/faculty6.png";
+import faculty1 from "../assets/images/faculty/faculty1.png";
+import faculty2 from "../assets/images/faculty/faculty2.png";
+import faculty3 from "../assets/images/faculty/faculty3.png";
+import faculty4 from "../assets/images/faculty/faculty4.png";
+import faculty5 from "../assets/images/faculty/faculty5.png";
+import faculty6 from "../assets/images/faculty/faculty6.png";
 
 const facultyData = [
   {
